@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmnls:th="http://www.thymeleaf.org">
+
+<head>
+
+<title>Update Flight</title>
+</head>
+<body>
+	<h2>Hello!</h2>
+	<h3>Update Flight</h3>
+	
+	<form th:action="@{'/flight/updateFlight/'+ ${flight.id}}" th:object="${flight}"method="POST">
+		
+		FlightNumber: <br>
+		<input type="text" name = "flightNumber" />
+		<br>
+		Origin: <br>
+		<input type="text" name = "origin" />
+		<br>
+		Destinationr: <br>
+		<input type="text" name="destination" />
+		<br>
+		
+		Time: <br>
+		<input type="date" name="time" />
+		<br>
+		<button type="submit">Submit</button>
+	</form>
+
+</body>
+</html>
